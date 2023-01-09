@@ -1,0 +1,213 @@
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: rgb(240, 142, 67);
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+.one {
+  width: 30%;
+}
+.two {
+  width: 40%;
+  padding: 7px 50px;
+  background: #efefef;
+  border-radius: 2px;
+}
+.three {
+  width: 30%;
+  background-image: url("https://images.pexels.com/photos/2224890/pexels-photo-2224890.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}
+.A21 {
+  display: block;
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+.donors {
+  display: block;
+  position: relative;
+  text-align: center;
+  top: 380px;
+  color: rgb(247, 243, 204);
+  text-transform: uppercase;
+}
+
+.questions {
+  display: block;
+  font-weight: bold;
+  right: 10px;
+  text-align: center;
+  font-size: 19px;
+  position: relative;
+  top: 420px;
+  color: rgb(245, 242, 220);
+  margin-top: 30px;
+  padding-bottom: 0%;
+  margin-bottom: 0px;
+}
+.line1 {
+  width: 100%;
+  position: relative;
+  right: 0px;
+  top: 200px;
+  background-color: rgb(105, 103, 103);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(255, 251, 254, 1) 100%
+  );
+  height: 5px;
+  border: none;
+}
+.volunteer {
+  text-align: center;
+  display: block;
+  margin-top: 15px;
+  background-color: #efefef;
+  color: rgb(57, 58, 60);
+  font-size: 16px;
+}
+
+header {
+  text-align: center;
+  display: block;
+  margin-top: 50px;
+  color: rgb(57, 58, 60);
+  background-color: #efefef;
+  font-size: 23px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.card {
+  background-color: #efefef;
+  border-radius: 20px;
+  display: block;
+  margin-left: 75px;
+  margin-top: 300px;
+  text-align: justify;
+}
+.list {
+  list-style: none;
+}
+.button {
+  display: block;
+  left: 110px;
+  top: 380px;
+  min-width: 200px;
+  min-height: 60px;
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: #313133;
+  background: #fdfdfd;
+  background: linear-gradient(
+    90deg,
+    rgb(231, 123, 56) 0%,
+    rgb(227, 98, 42) 100%
+  );
+  border: none;
+  border-radius: 900px;
+  box-shadow: 12px 12px 24px rgba(255, 255, 255, 0.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 5px;
+}
+
+button:before {
+  content: "";
+  border-radius: 900px;
+  min-width: calc(200px + 12px);
+  min-height: calc(60px + 12px);
+  border: 6px solid #fffdd6;
+  box-shadow: 0 0 60px rgba(232, 37, 37, 0.64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.button:hover,
+.button:focus {
+  color: #313133;
+  transform: translateY(-6px);
+}
+
+button:hover::before,
+button:focus::before {
+  opacity: 1;
+}
+
+button::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border: 6px solid #e9652c;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+button:hover::after,
+button:focus::after {
+  animation: none;
+  display: none;
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+.slogan {
+  display: block;
+  top: 240px;
+  font-weight: 700;
+  text-align: center;
+  font-size: 30px;
+  font-family: Hack, sans-serif;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #000, rgb(169, 169, 169), #000);
+  letter-spacing: 1px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-repeat: repeat;
+  background-size: 90%;
+  animation: shine 10s linear infinite;
+  position: relative;
+}
+
+@keyframes shine {
+  0% {
+    background-position-x: -500%;
+  }
+  100% {
+    background-position-x: 500%;
+  }
+}
